@@ -8,9 +8,11 @@
 body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
   height: 100vh;
+  overflow: hidden;
+  background-color: #CECCCE;
 }
 
 .main-sect {
@@ -36,6 +38,13 @@ body {
 }
 
 .side {
-  background-color: chartreuse;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=style.css.map */

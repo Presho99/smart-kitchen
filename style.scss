@@ -8,8 +8,10 @@
 body{
     
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     height: 100vh;
+    overflow: hidden;
+    background-color: #CECCCE;
 }
 
 .main-sect{
@@ -28,5 +30,8 @@ background-color: darkgoldenrod;
     background-color: darkred;
 }
 .side{
-    background-color: chartreuse;
+  padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
+
