@@ -1,5 +1,16 @@
 const foodsUrl = 'https://presho99.github.io/skfoods/foods'
 
+
+// 2. Randomize background color for box inside rating
+const colors = ["#f9a166", "f5b8d7", "#coc9a9", "#ffd15e"]
+const ratingsColorElement = document.querySelector('.rating-color')
+
+function changeColor() {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    ratingsColorElement.style.backgroundColor = randomColor;
+}
+
+
 function fetchFoodsData(){
     return fetch(foodsUrl)
     .then(response => response.json())
@@ -24,7 +35,14 @@ function displayRatings(){
 
                 // Append the rating element to the container
                 ratings.appendChild(ratingElement)
+
+                ratingsColorElement.appendChild(ratingElement);
             })
+
+            // Change color every 30 seconds
+            setInterval(changeColor, 30000)
+            // Display initial color
+            changeColor()
         }
     })
 }
