@@ -83,10 +83,19 @@ background-color: darkgoldenrod;
         }
 
         .rating{
-            height: 10%;
-            width: 30%;
-            
+            height: 20%;
+            width: 20%;
+            position: relative;
             border-radius: 15px;
+            background-color: chocolate;
+            margin-top: 10px;
+
+            i{
+                position: absolute;
+                bottom: 5px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
 }

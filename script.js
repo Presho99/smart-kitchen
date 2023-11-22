@@ -33,6 +33,12 @@ function displayRatings(){
                 const ratingElement = document.createElement('h3')
                 ratingElement.textContent = `${rating}`
 
+                // Styling ratingElement
+                ratingElement.style.position = 'absolute'
+                ratingElement.style.fontSize = '30px'
+                ratingElement.style.top = "0"
+                ratingElement.style.right = "-20px"
+
                 // Append the rating element to the container
                 ratings.appendChild(ratingElement)
 
