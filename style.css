@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +7,7 @@
 }
 
 body {
+  font-family: 'Inter', sans-serif;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 1fr;
@@ -38,7 +40,7 @@ body {
 }
 
 .side {
-  padding: 20px;
+  padding: 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,5 +48,66 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.side .icons {
+  width: 40%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.side .icons i {
+  cursor: pointer;
+}
+
+.side .side-box {
+  background-color: #fff;
+  width: 95%;
+  height: 70%;
+  margin-top: 30px;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.side .side-box .header {
+  background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.side .side-box .header p {
+  cursor: pointer;
+}
+
+.side .side-box .header .active {
+  font-weight: 600;
+}
+
+.side .side-box .rating {
+  height: 20%;
+  width: 30%;
+  background-color: darkmagenta;
+  border-radius: 15px;
 }
 /*# sourceMappingURL=style.css.map */
