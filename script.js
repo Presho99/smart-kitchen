@@ -25,9 +25,33 @@ function displayRatings(){
     .then(foodsData => {
         if(foodsData) {
             const ratings = document.querySelector('.rating')
+            const carousel = document.querySelector('.carousel')
 // Loop through each food item and create HTML elements
             foodsData.forEach(food => {
                 const rating = food.rating
+                const name = food.name
+                const imageUrl = food.avatar
+
+                // Create a div to hold image and name
+                const foodCarousel = document.createElement('div')
+
+                // Create an image element for the food image
+                const imageElement = document.createElement('img')
+                imageElement.src = imageUrl
+                imageElement.alt = name
+
+                // Create a p element for the food name
+                const nameElement = document.createElement('p')
+                nameElement.textContent = name
+
+                // Append image and name elements to the container
+                foodCarousel.appendChild(imageElement)
+                foodCarousel.appendChild(nameElement)
+
+                // Styling food container
+                // Append food container to the carousel
+                carousel.insertBefore(foodCarousel, carousel.lastElementChild)
+
 
                 // Create a h3 element for each rating
                 const ratingElement = document.createElement('h3')

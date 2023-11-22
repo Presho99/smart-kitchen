@@ -13,7 +13,6 @@ body {
   -ms-grid-columns: 3fr 1fr;
       grid-template-columns: 3fr 1fr;
   height: 100vh;
-  overflow: hidden;
   background-color: #CECCCE;
 }
 
