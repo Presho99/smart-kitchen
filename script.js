@@ -32,7 +32,7 @@ function displayRatings(){
                 const name = food.name
                 const imageUrl = food.avatar
 
-                // Create a div to hold image and name
+                // Create a div to hold all image divs
                 const foodCarousel = document.createElement('div')
 
                 // Create an image element for the food image
@@ -44,11 +44,54 @@ function displayRatings(){
                 const nameElement = document.createElement('p')
                 nameElement.textContent = name
 
+                // Styling nameElement
+                // nameElement.style.backgroundColor = "yellow"
+                nameElement.style.width = "70%"
+                nameElement.style.height = "25%"
+                nameElement.style.display = "flex"
+                nameElement.style.alignItems = "center"
+                nameElement.style.justifyContent = "center"
+                nameElement.style.textAlign = "center"
+                nameElement.style.fontSize = "12px"
+                nameElement.style.fontWeight = "bold"
+                // nameElement.style.color = "#B1B0B4"
+                nameElement.style.marginTop = "10px"
+
+
+                // Create div for each image
+                const foodDiv = document.createElement('div')
+
                 // Append image and name elements to the container
                 foodCarousel.appendChild(imageElement)
                 foodCarousel.appendChild(nameElement)
 
-                // Styling food container
+                // Styling foodDiv
+                foodDiv.style.width = '150px'
+                foodDiv.style.height = '100%'
+                foodDiv.style.backgroundColor = "yellow"
+                foodDiv.style.display = "flex"
+                foodDiv.style.flexDirection = "column"
+                foodDiv.style.justifyContent = 'center'
+                foodDiv.style.alignItems = 'center'
+                foodDiv.style.cursor = 'pointer'
+
+                // Add stying to images
+                imageElement.style.height = '100px'
+                imageElement.style.width = '100px'
+                imageElement.style.objectFit = 'cover'
+
+                // Styling food carousel
+                foodCarousel.style.display = 'flex'
+                foodCarousel.style.flexDirection = 'column'
+                foodCarousel.style.justifyContent = 'center'
+                foodCarousel.style.alignItems = 'center'
+                foodCarousel.style.height = '100%'
+                foodCarousel.style.width = '150px'
+                // foodCarousel.style.backgroundColor = "blue"
+                foodCarousel.style.marginLeft = '20px'
+                foodCarousel.style.cursor = "pointer"
+
+              
                 // Append food container to the carousel
                 carousel.insertBefore(foodCarousel, carousel.lastElementChild)
 
